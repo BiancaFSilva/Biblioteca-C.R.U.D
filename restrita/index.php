@@ -1,15 +1,27 @@
-<?php include '../conecta.php'; ?>
+<?php 
+    session_start();
+
+    if ((!isset ($_SESSION['id']) == true) and (!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['email']) == true)) {
+        unset(!isset ($_SESSION['id']));
+        unset(!isset ($_SESSION['nome']));
+        unset(!isset ($_SESSION['email']));
+
+        header('Location: ../index.html');
+    }
+
+    include '../conecta.php'; 
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en">
-<!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Área Administrativa </title>
+        <title>Área Administrativa</title>
         <meta name="description" content="Sufee Admin - HTML5 Admin Template">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -23,14 +35,11 @@
         <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
         <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
 
-
         <link rel="stylesheet" href="assets/css/style.css">
 
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
     </head>
     <body>
-        <!-- Left Panel -->
         <aside id="left-panel" class="left-panel">
             <nav class="navbar navbar-expand-sm navbar-default">
                 <div class="navbar-header">
@@ -40,74 +49,51 @@
                     <a class="navbar-brand" href="index.php"><img src="images/logo_novo.png" alt="Logo"></a>
                     <a class="navbar-brand hidden" href="index.php"><img src="images/logo2.png" alt="Logo"></a>
                 </div>
-
                 <div id="main-menu" class="main-menu collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active">
-                            <a href="index.php"> <i class="menu-icon fa fa-dashboard"></i> Painel de Controle </a>
+                            <a href="index.php"><i class="menu-icon fa fa-dashboard"></i>Painel de Controle</a>
                         </li>
-                        <h3 class="menu-title"> Menu de Opções </h3><!-- /.menu-title -->
+                        <h3 class="menu-title">Menu de Opções</h3>
                         <li class="menu-item-has-children dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Alunos</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-laptop"></i>Alunos</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><i class="fa fa-puzzle-piece"></i><a href="form_cad_aluno.php">Cadastrar Aluno</a></li>
-                                
+                                <li><i class="fa fa-puzzle-piece"></i><a href="form_cad_aluno.php">Cadastrar Aluno</a></li>                                
                             </ul>
                         </li>
                         <li class="menu-item-has-children dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Livros</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-table"></i>Livros</a>
                             <ul class="sub-menu children dropdown-menu">
-                                <li><i class="fa fa-table"></i><a href="form_cad_livro.php">Cadastrar Livro</a></li>
-                                
+                                <li><i class="fa fa-table"></i><a href="form_cad_livro.php">Cadastrar Livro</a></li>                                
                             </ul>
                         </li>
                         <li class="menu-item-has-children dropdown">
-                            <a href="emprestimos.php"  aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-th"></i>Empréstimos</a>
-                            
-                        </li>
-
-                        
+                            <a href="emprestimos.php"  aria-haspopup="true" aria-expanded="false"><i class="menu-icon fa fa-th"></i>Empréstimos</a>                            
+                        </li>                        
                     </ul>
-                </div><!-- /.navbar-collapse -->
+                </div>
             </nav>
-        </aside><!-- /#left-panel -->
-
-        <!-- Left Panel -->
-
-        <!-- Right Panel -->
+        </aside>
 
         <div id="right-panel" class="right-panel">
-
-            <!-- Header-->
             <header id="header" class="header">
-
                 <div class="header-menu">
-
                     <div class="col-sm-7">
-                        <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
-                        
+                        <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>                        
                     </div>
-
                     <div class="col-sm-5">
                         <div class="user-area dropdown float-right">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img class="user-avatar rounded-circle" src="images/admin.jpg" alt="User Avatar">
                             </a>
-
                             <div class="user-menu dropdown-menu">
-                                <a class="nav-link" href="perfil.php"><i class="fa fa-user"></i> Perfil</a>
-
-                                <a class="nav-link" href="sair.php"><i class="fa fa-power-off"></i> Sair</a>
+                                <a class="nav-link" href="perfil.php"><i class="fa fa-user"></i>Perfil</a>
+                                <a class="nav-link" href="sair.php"><i class="fa fa-power-off"></i>Sair</a>
                             </div>
-                        </div>
-
-                        
-
+                        </div>                       
                     </div>
                 </div>
-
-            </header><!-- /header -->
-            <!-- Header-->
+            </header>
 
             <div class="breadcrumbs">
                 <div class="col-sm-4">
@@ -127,24 +113,21 @@
                     </div>
                 </div>
             </div>
-
             <div class="content mt-3">
                 <div class="col-sm-12">
                     <div class="card">
-                                <div class="card-header">
-                                    <strong class="card-title">Gráfico de Empréstimos</strong>
-                                </div>
-                                <div class="card-body">
-                                    COLOCAR GRÁFICO DE EMPRÉSTIMOS POR GENERO
-                                </div>
-                            </div>
-                </div>
-                
-
+                        <div class="card-header">
+                            <strong class="card-title">Gráfico de Empréstimos</strong>
+                        </div>
+                        <div class="card-body">
+                            COLOCAR GRÁFICO DE EMPRÉSTIMOS POR GENERO
+                        </div>
+                    </div>
+                </div>              
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title"> Alunos Cadastrados </strong>
+                            <strong class="card-title">Alunos Cadastrados</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -169,9 +152,9 @@
 
                                     ?>
                                     <td>
-                                        <a href="form_atualiza_aluno.php?ra= <?php echo $linha['ra']; ?>" class="btn btn-primary"> Atualizar </a>
+                                        <a href="form_atualiza_aluno.php?ra= <?php echo $linha['ra']; ?>" class="btn btn-primary">Atualizar</a>
                                         &nbsp; &nbsp;
-                                        <a href="delete_aluno.php?ra= <?php echo $linha['ra']; ?>" class="btn btn-danger"> Deletar </a>
+                                        <a href="delete_aluno.php?ra= <?php echo $linha['ra']; ?>" class="btn btn-danger">Deletar</a>
                                     </td>
                                     <?php
                                             echo "</tr>";
@@ -182,11 +165,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <strong class="card-title"> Livros Cadastrados </strong>
+                            <strong class="card-title">Livros Cadastrados</strong>
                         </div>
                         <div class="card-body">
                             <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
@@ -210,9 +192,9 @@
                                                 echo "<td>".$linha['qtdeExemplares']."</td>";
                                     ?>
                                     <td>
-                                        <a href="form_atualiza_livro.php?codlivro= <?php echo $linha['codlivro']; ?>" class="btn btn-primary"> Atualizar </a>
+                                        <a href="form_atualiza_livro.php?codlivro= <?php echo $linha['codlivro']; ?>" class="btn btn-primary">Atualizar</a>
                                         &nbsp; &nbsp;
-                                        <a href="delete_livro.php?codlivro= <?php echo $linha['codlivro']; ?>" class="btn btn-danger"> Deletar </a>
+                                        <a href="delete_livro.php?codlivro= <?php echo $linha['codlivro']; ?>" class="btn btn-danger">Deletar</a>
                                     </td>
                                     <?php
                                             echo "</tr>";
@@ -223,16 +205,13 @@
                         </div>
                     </div>
                 </div>
-            </div> <!-- .content -->
-        </div><!-- /#right-panel -->
-
-        <!-- Right Panel -->
+            </div>
+        </div>
 
         <script src="vendors/jquery/dist/jquery.min.js"></script>
         <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
         <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="assets/js/main.js"></script>
-
 
         <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
         <script src="assets/js/dashboard.js"></script>
@@ -258,6 +237,5 @@
                 });
             })(jQuery);
         </script>
-
     </body>
 </html>
