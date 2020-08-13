@@ -12,11 +12,11 @@ Delete (Destroy) => DELETE
 ```
 
 ### Linguagens
-- MySql
 - PHP
 - TSQL
 - HTML
 - CSS
+- MySql
 - JavaScript
 - Hack
 
@@ -24,4 +24,4 @@ Delete (Destroy) => DELETE
 - [Initializr - Bootstrap](http://www.initializr.com/)
 - [Sufee HTML5 Admin Dashboard](https://colorlib.com/polygon/sufee/index.html)
 
-##### [License MIT](#license)
+##### License MIT
