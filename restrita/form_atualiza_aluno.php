@@ -163,18 +163,42 @@
                                 </div>
                                 <div class="col-12 col-md-9">
                                     <select name="select" id="select" class="form-control">
-                                        <option value="1C">1C</option>
-                                        <option value="2C">2C</option>
-                                        <option value="3C">3C</option>
-                                        <option value="1A">1A</option>
-                                        <option value="2A">2A</option>
-                                        <option value="3A">3A</option>
-                                        <option value="1B">1B</option>
-                                        <option value="2B">2B</option>
-                                        <option value="3B">3B</option>
-                                        <option value="1F">1F</option>
-                                        <option value="2F">2F</option>
-                                        <option value="3F">3F</option>
+                                        <option value="1A">1ºA - NovoTec ADM</option>
+                                        <option value="2A">2ºA - ETIM ADM</option>
+                                        <option value="3A">3ºA - ETIM ADM</option>
+
+                                        <option value="1B">1ºB - NovoTec RH</option>
+                                        <option value="2B">2ºB - Ensino Médio</option>
+                                        <option value="3B">3ºB - Ensino Médio</option>
+
+                                        <option value="1C">1ºC - NovoTec INFO</option>
+                                        <option value="2C">2ºC - ETIM INFO</option>
+                                        <option value="3C">3ºC - ETIM INFO</option>
+
+                                        <option value="1D">1ºD - Administração</option>
+                                        <option value="2D">2ºD - Administração</option>
+                                        <option value="3D">3ºD - Administração</option>
+
+                                        <option value="1F">1°F - NovoTec INFO</option>
+                                        <option value="2F">2ºF - MTec BD</option>
+                                        <option value="3F">3ºF - MTec BD</option>
+
+                                        <option value="1G">1ºG - Contabilidade</option>
+                                        <option value="2G">2ºG - Contabilidade</option>
+                                        <option value="3G">3ºG - Contabilidade</option>
+
+                                        <option value="1H">1ºH - Química</option>
+                                        <option value="2H">2ºH - Química</option>
+                                        <option value="3H">3ºH - Química</option>
+                                        <option value="4H">4ºH - Química</option>
+
+                                        <option value="1I">1ºI - NovoTec ADM</option>
+                                        <option value="2I">2ºI - MTec RH</option>
+                                        <option value="3I">3ºI - MTec RH</option>
+
+                                        <option value="1K">1ºK - Logística</option>
+                                        <option value="2K">2ºK - Logística</option>
+                                        <option value="3K">3ºK - Logística</option>
                                     </select>
                                 </div>
                             </div>
