@@ -1,4 +1,6 @@
 <?php 
+    include '../conecta.php'; 
+/*
     session_start();
 
     if ((!isset ($_SESSION['id']) == true) and (!isset ($_SESSION['nome']) == true) and (!isset ($_SESSION['email']) == true)) {
@@ -7,9 +9,7 @@
         unset(!isset ($_SESSION['email']));
 
         header('Location: ../index.html');
-    }
-
-    include '../conecta.php'; 
+    }*/
 ?>
 
 <!doctype html>
